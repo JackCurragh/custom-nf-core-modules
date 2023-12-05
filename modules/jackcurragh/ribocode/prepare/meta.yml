@@ -28,7 +28,7 @@ output:
       pattern: "versions.yml"
   - annotation:
       type: directory
-      description: path to the annotation directory
+      description: path to the annotation direcotry
       pattern: "annotation/"
 
 authors:

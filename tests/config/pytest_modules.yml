@@ -74,6 +74,10 @@ prodigal:
   - modules/ebi-metagenomics/prodigal/**
   - tests/modules/ebi-metagenomics/prodigal/**
 
+ribocode/metaplots:
+  - modules/jackcurragh/ribocode/metaplots/**
+  - tests/modules/jackcurragh/ribocode/metaplots/**
+
 ribocode/prepare:
   - modules/ebi-metagenomics/ribocode/prepare/**
   - tests/modules/ebi-metagenomics/ribocode/prepare/**
