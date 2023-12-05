@@ -1,13 +1,13 @@
-## TODO nf-core: Please run the following command to build this file:
-#                nf-core modules create-test-yml /prepare
-- name: "ribocode prepare"
+- name: ribocode prepare test_ribocode_prepare
   command: nextflow run ./tests/modules/jackcurragh/ribocode/prepare -entry test_ribocode_prepare -c ./tests/config/nextflow.config
   tags:
-    - "ribocode"
-    - "ribocode/prepare"
+    - ribocode/prepare
+    - ribocode
   files:
-    - path: "output/ribocode/test.bam"
-      md5sum: e667c7caad0bc4b7ac383fd023c654fc
-    - path: "output/ribocode/versions.yml"
-      md5sum: a01fe51bc4c6a3a6226fbf77b2c7cf3b
-    
+    - path: output/ribocode/annotation/transcripts.pickle
+      md5sum: 313d3e5a2f6a6d653e00863fd9e133f0
+    - path: output/ribocode/annotation/transcripts_cds.txt
+      md5sum: a79c289b6134236bc1d244eed2bb149b
+    - path: output/ribocode/annotation/transcripts_sequence.fa
+      md5sum: 54db8478e8970bc92a91cb3f248897f6
+    - path: output/ribocode/versions.yml

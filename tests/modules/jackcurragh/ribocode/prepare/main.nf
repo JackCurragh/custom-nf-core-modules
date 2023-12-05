@@ -6,10 +6,8 @@ include { RIBOCODE_PREPARE } from '../../../../../modules/jackcurragh/ribocode/p
 
 workflow test_ribocode_prepare {
     
-    input = [
-        [ id:'test', single_end:false ], // meta map
-        file(params.test_data['sarscov2']['illumina']['test_paired_end_bam'], checkIfExists: true)
-    ]
+    genome_fasta = file(params.test_data['homo_sapiens']['genome']['genome_fasta'], checkIfExists: true)
+    genome_gtf = file(params.test_data['homo_sapiens']['genome']['genome_gtf'], checkIfExists: true)
 
-    RIBOCODE_PREPARE ( input )
+    RIBOCODE_PREPARE ( genome_fasta, genome_gtf )
 }

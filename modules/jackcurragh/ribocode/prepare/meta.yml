@@ -1,55 +1,35 @@
 ---
 # yaml-language-server: $schema=https://raw.githubusercontent.com/nf-core/modules/master/modules/yaml-schema.json
 name: "ribocode_prepare"
-## TODO nf-core: Add a description of the module and list keywords
-description: write your description here
+description: Prepare the annotation files for RiboCode ORF calling
 keywords:
-  - sort
-  - example
-  - genomics
+  - Ribo-Seq
+  - Ribosome Profiling
+  - ORF calling
 tools:
   - "ribocode":
-      ## TODO nf-core: Add a description and other details for the software below
       description: "A package for detecting the actively translated ORFs using ribosome-profiling data"
-      homepage: "None"
-      documentation: "None"
-      tool_dev_url: "None"
-      doi: ""
+      homepage: "https://github.com/xryanglab/RiboCode"
+      documentation: "https://github.com/xryanglab/RiboCode"
+      tool_dev_url: "https://github.com/xryanglab/RiboCode"
+      doi: "10.1093/nar/gky179"
       licence: "['MIT']"
 
-## TODO nf-core: Add a description of all of the variables used as input
 input:
-  # Only when we have meta
-  - meta:
-      type: map
-      description: |
-        Groovy Map containing sample information
-        e.g. `[ id:'test', single_end:false ]`
-  
-  ## TODO nf-core: Delete / customise this example input
-  - bam:
+  - gtf:
       type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
+      description: Sorted GTF file
+      pattern: "*.{gtf}"
 
-## TODO nf-core: Add a description of all of the variables used as output
 output:
-  #Only when we have meta
-  - meta:
-      type: map
-      description: |
-        Groovy Map containing sample information
-        e.g. `[ id:'test', single_end:false ]`
-  
   - versions:
       type: file
       description: File containing software versions
       pattern: "versions.yml"
-  ## TODO nf-core: Delete / customise this example output
-  - bam:
-      type: file
-      description: Sorted BAM/CRAM/SAM file
-      pattern: "*.{bam,cram,sam}"
+  - annotation:
+      type: directory
+      description: path to the annotation directory
+      pattern: "annotation/"
 
 authors:
   - "@JackCurragh"
