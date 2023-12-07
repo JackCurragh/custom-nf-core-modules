@@ -27,5 +27,5 @@ workflow test_ribocode_metaplots {
     ]
 
     RIBOCODE_PREPARE( fasta[1], gtf[1] )
-    RIBOCODE_METAPLOTS( , RIBOCODE_PREPARE.out.annotation )
+    RIBOCODE_METAPLOTS( input, RIBOCODE_PREPARE.out.annotation )
 }
