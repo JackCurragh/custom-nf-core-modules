@@ -1,6 +1,6 @@
 
 - name: "ribocode ribocode"
-  command: nextflow run ./tests/modules/nf-core/ribocode/ribocode -entry test_ribocode_ribocode -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/ribocode/ribocode/nextflow.config
+  command: nextflow run ./tests/modules/jackcurragh/ribocode/ribocode -entry test_ribocode_ribocode -c ./tests/config/nextflow.config -c ./tests/modules/jackcurragh/ribocode/ribocode/nextflow.config
   tags:
     - "ribocode"
     - "ribocode/ribocode"

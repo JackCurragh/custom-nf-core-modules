@@ -14,12 +14,12 @@ process RIBOCODE_RIBOCODE {
 
     output:
 
-    path tuple val(meta), path("*ORFs.bed")             , emit: orf_bed, optional: true
-    path tuple val(meta), path("*ORFs_collapsed.bed")   , emit: orf_bed_collapsed, optional: true
-    path tuple val(meta), path("*ORFs_collapsed.gtf")   , emit: orf_gtf_collapsed, optional: true
-    path tuple val(meta), path("*ORFs_collapsed.txt")   , emit: orf_txt_collapsed
-    path tuple val(meta), path("*ORFs.gtf")             , emit: orf_gtf, optional: true
-    path tuple val(meta), path("*ORFs.txt")             , emit: orf_txt
+    tuple val(meta), path("*ORFs.bed")             , emit: orf_bed, optional: true
+    tuple val(meta), path("*ORFs_collapsed.bed")   , emit: orf_bed_collapsed, optional: true
+    tuple val(meta), path("*ORFs_collapsed.gtf")   , emit: orf_gtf_collapsed, optional: true
+    tuple val(meta), path("*ORFs_collapsed.txt")   , emit: orf_txt_collapsed
+    tuple val(meta), path("*ORFs.gtf")             , emit: orf_gtf, optional: true
+    tuple val(meta), path("*ORFs.txt")             , emit: orf_txt
     path "versions.yml"          , emit: versions
 
     when:

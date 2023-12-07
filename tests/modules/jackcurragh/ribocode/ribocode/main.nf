@@ -26,9 +26,9 @@ workflow test_ribocode_ribocode {
     ]
     config = [
         [id:'test_config'],
-        [file(params.test_data['custom']['ribocode']['HEK_riboseq_transcriptomic_bam_config'], checkIfExists: true) ]
+        [file(params.test_data['custom']['ribocode']['HEK_riboseq_transcriptomic_config'], checkIfExists: true) ]
     ]
 
     RIBOCODE_PREPARE( fasta[1], gtf[1] )
-    RIBOCODE_RIBOCODE ( STAR_ALIGN.out.bam_transcript, RIBOCODE_PREPARE.out.annotation, config )
+    RIBOCODE_RIBOCODE ( input, RIBOCODE_PREPARE.out.annotation, config )
 }
