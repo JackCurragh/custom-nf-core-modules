@@ -14,15 +14,15 @@ workflow test_ribocode_ribocode {
     ]
     fasta = [
         [ id:'test_fasta' ], // meta map
-        [ file(params.test_data['homo_sapiens']['genome']['genome_fasta'], checkIfExists: true) ]
+        [ file(params.test_data['custom']['genome']['chr22_fasta'], checkIfExists: true) ]
     ]
     fai = [
         [ id:'test_fai' ], // meta map
-        [ file(params.test_data['homo_sapiens']['genome']['genome_fasta_fai'], checkIfExists: true) ]
+        [ file(params.test_data['custom']['genome']['chr22_fai'], checkIfExists: true) ]
     ]
     gtf = [
         [ id:'test_fasta_gtf' ], // meta map
-        [ file(params.test_data['homo_sapiens']['genome']['genome_gtf'], checkIfExists: true) ]
+        [ file(params.test_data['custom']['genome']['chr22_gtf'], checkIfExists: true) ]
     ]
     config = [
         [id:'test_config'],

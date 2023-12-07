@@ -31,8 +31,8 @@ process RIBOCODE_RIBOCODE {
     RiboCode \\
         -a $annotation \\
         -c $config \\
-        -o annotation \\
-        $args
+        -o ORFs \\
+        $args 2>&1 || test -s ORFs.txt
 
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
@@ -44,10 +44,9 @@ process RIBOCODE_RIBOCODE {
     def args = task.ext.args ?: ''
     
     """
-
     cat <<-END_VERSIONS > versions.yml
     "${task.process}":
-        RiboCode: \$(RiboCode --version 2>&1)
+        RiboCode: \$(RiboCode --version)
     END_VERSIONS
     """
 }
