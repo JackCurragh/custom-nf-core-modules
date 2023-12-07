@@ -13,10 +13,9 @@ tools:
       documentation: "https://github.com/xryanglab/RiboCode"
       tool_dev_url: "https://github.com/xryanglab/RiboCode"
       doi: "10.1093/nar/gky179"
-      licence: "['MIT']"
+      licence: ['MIT']
 
 input:
-  # Only when we have meta
   - meta:
       type: map
       description: |

@@ -2,7 +2,7 @@ process RIBOCODE_PREPARE {
     tag "$fasta"
     label 'process_single'
 
-    conda "bioconda::ribocode=1.2.15"
+    conda "${moduleDir}/environment.yml"
     container "${ workflow.containerEngine == 'singularity' && !task.ext.singularity_pull_docker_container ?
         'https://depot.galaxyproject.org/singularity/ribocode:1.2.15--pyhfa5458b_0':
         'biocontainers/ribocode:1.2.15--pyhfa5458b_0' }"

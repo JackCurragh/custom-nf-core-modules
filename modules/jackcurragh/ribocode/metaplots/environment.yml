@@ -1,0 +1,7 @@
+name: ribocode_metaplots
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::ribocode=1.2.15

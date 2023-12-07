@@ -1,0 +1,7 @@
+name: ribocode_ribocode
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - bioconda::ribocode=1.2.15

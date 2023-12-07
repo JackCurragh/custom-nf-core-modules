@@ -1,5 +1,4 @@
-## TODO nf-core: Please run the following command to build this file:
-#                nf-core modules create-test-yml ribocode/ribocode
+
 - name: "ribocode ribocode"
   command: nextflow run ./tests/modules/nf-core/ribocode/ribocode -entry test_ribocode_ribocode -c ./tests/config/nextflow.config -c ./tests/modules/nf-core/ribocode/ribocode/nextflow.config
   tags:
