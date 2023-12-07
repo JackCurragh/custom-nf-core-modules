@@ -2,7 +2,7 @@
 
 nextflow.enable.dsl = 2
 
-include { RIBOCODE_PREPARE } from '../../../../../modules/nf-core/ribocode/prepare/main.nf'
+include { RIBOCODE_PREPARE } from '../../../../../modules/jackcurragh/ribocode/prepare/main.nf'
 
 workflow test_ribocode_prepare {
     

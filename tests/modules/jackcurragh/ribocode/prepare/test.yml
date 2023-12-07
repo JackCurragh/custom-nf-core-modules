@@ -1,8 +1,8 @@
 - name: ribocode prepare test_ribocode_prepare
-  command: nextflow run ./tests/modules/nf-core/ribocode/prepare -entry test_ribocode_prepare -c ./tests/config/nextflow.config
+  command: nextflow run ./tests/modules/jackcurragh/ribocode/prepare -entry test_ribocode_prepare -c ./tests/config/nextflow.config
   tags:
-    - ribocode/prepare
     - ribocode
+    - ribocode/prepare
   files:
     - path: output/ribocode/annotation/transcripts.pickle
       md5sum: 313d3e5a2f6a6d653e00863fd9e133f0
