@@ -11,3 +11,17 @@
     - path: output/ribocode/annotation/transcripts_sequence.fa
       md5sum: 54db8478e8970bc92a91cb3f248897f6
     - path: output/ribocode/versions.yml
+
+- name: ribocode prepare test_ribocode_prepare_custom
+  command: nextflow run ./tests/modules/jackcurragh/ribocode/prepare -entry test_ribocode_prepare_custom -c ./tests/config/nextflow.config
+  tags:
+    - ribocode
+    - ribocode/prepare
+  files:
+    - path: output/ribocode/annotation/transcripts.pickle
+      md5sum: 4ab536a30bdeb38577c96db8971358c7
+    - path: output/ribocode/annotation/transcripts_cds.txt
+      md5sum: 02dde66d5fe44171c2b3868a0d2b1657
+    - path: output/ribocode/annotation/transcripts_sequence.fa
+      md5sum: c0c2cc686aa32eaacfb8ae365d019699
+    - path: output/ribocode/versions.yml

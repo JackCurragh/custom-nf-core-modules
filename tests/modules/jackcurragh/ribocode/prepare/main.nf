@@ -11,3 +11,20 @@ workflow test_ribocode_prepare {
 
     RIBOCODE_PREPARE ( genome_fasta, genome_gtf )
 }
+
+workflow test_ribocode_prepare_custom {
+    
+    fasta = [
+        [ id:'test_fasta' ], // meta map
+        [ file(params.test_data['custom']['genome']['chr12_subset_fasta'], checkIfExists: true) ]
+    ]
+    fai = [
+        [ id:'test_fai' ], // meta map
+        [ file(params.test_data['custom']['genome']['chr12_subset_fai'], checkIfExists: true) ]
+    ]
+    gtf = [
+        [ id:'test_fasta_gtf' ], // meta map
+        [ file(params.test_data['custom']['genome']['chr12_subset_gtf'], checkIfExists: true) ]
+    ]
+    RIBOCODE_PREPARE ( fasta[1], gtf[1] )
+}

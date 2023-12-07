@@ -1,21 +1,21 @@
-- name: ribocode ribocode test_ribocode_ribocode
-  command: nextflow run ./tests/modules/jackcurragh/ribocode/ribocode -entry test_ribocode_ribocode -c ./tests/config/nextflow.config
+- name: ribocode ribocode test_ribocode_ribocode_subset
+  command: nextflow run ./tests/modules/jackcurragh/ribocode/ribocode -entry test_ribocode_ribocode_subset -c ./tests/config/nextflow.config
   tags:
     - ribocode
     - ribocode/ribocode
   files:
     - path: output/ribocode/ORFs.txt
-      md5sum: 418c157545c7e4c9ea55ccedc0847481
+      md5sum: 1219e3fe1c6fae41bffceaf8f7d0677f
     - path: output/ribocode/ORFs_collapsed.txt
-      md5sum: cf7eb20aed2b99b6ab8f55948f8b577a
+      md5sum: e2022986c62c217f8ee1b0164432364b
     - path: output/ribocode/annotation/transcripts.pickle
-      md5sum: 349bae23bcda54974b01084ff8e58d55
+      md5sum: 4ab536a30bdeb38577c96db8971358c7
     - path: output/ribocode/annotation/transcripts_cds.txt
-      md5sum: f8d06ee62fc9c51a1d9d9d2932a08c78
+      md5sum: 02dde66d5fe44171c2b3868a0d2b1657
     - path: output/ribocode/annotation/transcripts_sequence.fa
-      md5sum: b86bf032ecd9beb9300a2002e4faa02d
+      md5sum: c0c2cc686aa32eaacfb8ae365d019699
     - path: output/ribocode/annotation/transcripts_sequence.fa.flat
-      md5sum: 76f6cde4b32355ff846ce074906dbcf4
+      md5sum: 695d106303ca0030fe36674fb1c7c168
     - path: output/ribocode/annotation/transcripts_sequence.fa.gdx
-      md5sum: 58366b570a32be524600d85eee400041
+      md5sum: 5b2b8b3e53447e8e70857dbbca52639c
     - path: output/ribocode/versions.yml
